@@ -17,7 +17,7 @@ class PolarFlowClient(Session):
                       params={'start': start,
                               'end': stop}).json()
         return activities
-    def exportToGarmin(self,resultdir,streamlit=None,zipit=False,zipName='test.zip'):
+    def exportToGarmin(self,resultdir):
         activities = self.getActivities()
         if not os.path.exists(resultdir):
             os.makedirs(resultdir)
